@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Powered by Dialogflow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <div class="bot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="header-info">
+                <h2>AI Assistant</h2>
+                <p><span class="status-indicator"></span>Online • Ready to help</p>
+            </div>
+            <button class="minimize-btn" id="minimizeBtn" title="Minimize chat">
+                <i class="fas fa-minus"></i>
+            </button>
+        </div>
+        
+        <div class="chat-body" id="chatBody">
+            <div class="welcome-message">
+                <h3>Welcome to AI Assistant</h3>
+                <p>I'm here to help you with questions, provide information, and assist with various tasks. How can I help you today?</p>
+                <div class="suggestions">
+                    <div class="suggestion-chip" onclick="sendSuggestion('Hello')">Hello</div>
+                    <div class="suggestion-chip" onclick="sendSuggestion('What can you do?')">What can you do?</div>
+                    <div class="suggestion-chip" onclick="sendSuggestion('Tell me a joke')">Tell me a joke</div>
+                    <div class="suggestion-chip" onclick="sendSuggestion('Help')">Help</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here..." maxlength="500" autocomplete="off">
+            <button id="sendBtn" title="Send message">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="chat-toggle" id="chatToggle" title="Open chat">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
